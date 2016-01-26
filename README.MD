@@ -2,18 +2,12 @@
 
 ## 注意事項
 
-1、ocserv需要修改src/vpn.h来支持超过96行(ocserv默认值)但不超过200行(Cisco AnyConnect最大值)的路由表:
+1、0.10.5 及之前版本ocserv需要修改src/vpn.h来支持超过96行(ocserv默认值)但不超过200行(Cisco AnyConnect最大值)的路由表:
 
-* 0.10.5 及之前版本
 ```
 #define MAX_CONFIG_ENTRIES 96
 ```
-* 0.10.6 及之后版本
-```
-#define DEFAULT_CONFIG_ENTRIES 96
-```
-
-96改为200以上
+   0.10.6 及之后版本ocserv不需要修改，参考[https://gitlab.com/ocserv/ocserv/issues/17](https://gitlab.com/ocserv/ocserv/issues/17)
 
 2、根据[Cisco官方文档](http://www.cisco.com/c/en/us/products/collateral/security/ios-sslvpn/prod_white_paper0900aecd80512071.html)，no-route和route不能同时使用。
 
