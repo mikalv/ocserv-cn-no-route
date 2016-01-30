@@ -14,7 +14,7 @@ cat delegated-afrinic-extended-latest delegated-apnic-extended-latest delegated-
 cat delegated-all-latest | grep ipv4 | grep CN | awk -F\| '{ printf("%s/%d\n", $4, 32-log($5)/log(2)) }' >chnroute.txt
 ```
 
-2、合并chnroute.txt(336796416 IPs)，生成chnroute_merged.txt(336796416 IPs)
+2、合并chnroute.txt(336889600 IPs)，生成chnroute_merged.txt(336889600 IPs)
 
 3、将所有/12及以上改成/11，并合并，生成11_143.txt(717225984 IPs)
 
@@ -86,6 +86,7 @@ You can specify either split-include or split-exclude, but you cannot specify bo
 162.105.0.0/16
 166.111.0.0/16
 168.160.0.0/16
+170.179.0.0/16
 47.92.0.0/14
 47.96.0.0/11
 192.124.154.0/24
